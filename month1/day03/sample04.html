@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>학원 설문 조사 </h1>
+  <form onsubmit="return false">
+    <!-- 필드셋 : 입력 항목을 영역 별로 묶을 수 있다. -->
+    <fieldset>
+      <legend>연령대 조사</legend>
+      <input type="radio" name="age" value="10">10대 이하
+      <input type="radio" name="age" value="20">20대
+      <input type="radio" name="age" value="30">30대
+      <input type="radio" name="age" value="40">40대
+      <input type="radio" name="age" value="50">50대 이상
+   </fieldset>
+   <fieldset>
+     <legend>상담 내용</legend>
+    <textarea name="opinon"></textarea>
+  </fieldset>
+    <br>
+    <input type="submit" value="제출하기">
+
+  </form>
+
+</body>
+</html>
