@@ -3,15 +3,58 @@
 <head>
   <meta charset="utf-8">
   <title>요소의 유형과 테두리</title>
-  <style></style>
+  <style>
+
+    div{
+      display : inline-block;
+
+      /* 단축 속성(shorthand property)으로 테두리 긋기 */
+      border : 10px solid red; /* 두께, 모양, 색상 */
+    }
+    
+    span {
+      display: inline-block;
+
+      /* 각 속성을 따로 지정해주기 */
+      border-width: 10px;
+      border-style: dashed;
+      border-color: green;
+
+    }
+  </style>
 </head>
 <body>
   <div>나는 원래 블록 레벨 요소</div>
   <span>나는 원래 인라인 레벨 요소</span>
 </body>
 </html>
+<!-- 
+  인라인 : 요소의 크기만큼만 구역을 차지
+  div {
+    display: inline;
+  }
+  width가 안 먹힘
+  inline이지만 width가 먹히게 하려면
+  inline-block을 사용
 
+  
+  블록 : 가로 축을 다 차지
+    span {
+    display: block;
+  }
+  width가 먹힘
 
+display: none; : 요소를 숨김
+
+-->
+<!-- 
+  border : 테두리, 요소가 차지하고 있는 영역에 테두리를 그릴 수 있다.
+  두께, 모양, 크기 등을 지정 가능하고 단축속성을 사용 가능하다
+  span {
+    border: 1px solid red;
+  }
+
+ -->
 
 
 

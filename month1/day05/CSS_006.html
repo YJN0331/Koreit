@@ -3,7 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>박스모델의 여백 크기 정하기</title>
-  <style></style>
+  <style>
+
+    div {
+      width : 300px;
+      height: 300px;
+      padding-top : 50px;
+      padding-bottom : 50px;
+      padding-left : 50px;
+      padding-right : 50px;
+
+      margin : 10px; /*모든 면이 같다 */
+      margin : 10px 30px; /* 상하, 좌우 따로 */
+      margin : 10px 30px 20px ; /* 상, 좌우, 하 따로 */
+      margin : 10px 30px 20px 40px; /* 상 우 하 좌 따로 */ 
+    }
+  </style>
 </head>
 <body>
   <div>This is my content</div>

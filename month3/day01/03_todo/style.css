@@ -1,0 +1,28 @@
+
+.app {
+  position: relative;
+  width: 320px;
+  height : 568px;
+  border-radius: 16px;
+  background-color: rgb(171,193,219;)
+}
+
+ul {
+  max-height: 420px;
+  overflow: auto; /* 영역보다 더 큰 값을 가지는 것을 스크롤바를 통해 볼 수 있게 해준다. */
+}
+
+ul > li {
+  cursor: pointer;
+  position: relative;
+  left: 60px;
+
+}
+
+form {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+
+}
+
