@@ -9,8 +9,17 @@
 <body>
   
   <h1> 이름을 제출해주세요</h1>
-  <form>
-    <input type="text" placeholder="이름을 쓰세요">
+  <!-- 
+    method의 차이
+    get : 서버로부터 데이터를 가져오는 요청에 주로 사용. url에 값이 추가 됨.
+    post : 서버에다 데이터를 제공하는 요청에 주로 사용. url은 그대로.
+  -->
+  <!-- 
+    서버가 없는데 form을 실습하고 싶다면 return false 추가하기(js code)
+   -->
+
+  <form action="#" method="get" onsubmit="return false">
+    <input type="text" placeholder="이름을 쓰세요" name="name">
     <input type="submit" value="제출하기">
   </form>
 </body>
