@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Clock</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'LAB디지털';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Dokrip';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Dokrip.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'KoPubDotumMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="clock">
-    <div id="today" class="today"></div>
-    <div id="time" class="time"></div>
-  </div>
+  <header>
+    <nav class="navbar-nav">
+      <ul class="nav-ul">
+        <li class="nav-li"><a href="index.html" style="font-size: 40px;">Home</a></li>
+        <li class="nav-li"><a href="clock.html" style="font-family: LAB디지털; font-size: 20px; color:#8a8a8a;">Digital Clock</a></li>
+        <li class="nav-li"><a href="../02_lotto/Lotto.html" style="font-size: 40px;">
+            <span style="color: #e0cf14;">L</span>
+            <span style="color: blue;">O</span>
+            <span style="color: #a8a8a3;">T</span>
+            <span style="color: #ff6e30;">T</span>
+            <span style="color: lightgreen;">O</span>
+          </a></li>
+          <li class="nav-li"><a href="../03_todo/todo.html" style="font-family: Dokrip; font-size: 25px;">
+            <img width="20px" src="reminder.png" style="top: 10px;">ReMinder</a></li>
+        <li class="nav-li"><a href="../04_photo/photo.html" style="font-family: KoPubDotumMedium; font-size: 25px;">
+            <img width="20px" src="photoicon.svg">Photo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <DIV class="outline">
+        <div class="clock">
+          <div class="time">
+            <div id="hour" class="hour"></div>
+            <div id="frontminute" class="frontminute"></div>
+            <div id="minute" class="minute"></div>
+            <div id="afterminute" class="afterminute"></div>
+          </div>
+          <div class="date">
+            <div>year</div>
+            <div>mont</div>
+            <div>day</div>
+          </div>
+          <div class="date">
+            <div id="year" class="year"></div>
+            <div id="month" class="month"></div>
+            <div id="day" class="day"></div>
+          </div>
+        </div>
+      </DIV>
+    </section>
+  </main>
   <script src="script.js"></script>
 </body>
+
 </html>

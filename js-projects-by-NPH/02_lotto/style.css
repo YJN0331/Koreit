@@ -1,6 +1,46 @@
 @charset "utf-8";
 
 @font-face {
+  font-family: 'Dongle-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UhBeeann';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeann.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+}
+
+.nav-ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-top: 10px;
+}
+
+
+nav>ul>li {
+  font-size: 30px;
+  list-style: none;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+@font-face {
   font-family: 'CookieRun-Regular';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
   font-weight: normal;
@@ -8,8 +48,7 @@
 }
 
 *{
-  font-family: 'CookieRun-Regular';
-  box-sizing: border-box; 
+   box-sizing: border-box; 
   /* 
   width, height 안에서 padding, border, 콘텐츠 길이가 모두 포함되는 것
   width를 100을 줬는데 padding을 20을 주면 100 안에서 padding이 20만큼 차지하게 된다.
@@ -18,12 +57,9 @@
   */
 }
 
-html {
-  font-size: 32px;
-}
-
 body {
   margin: 0;
+  background-color: #FFD8D8;
 }
 
 .container {
@@ -38,24 +74,27 @@ body {
 
 .lotto {
   text-align: center;
+
 }
 
 .numbers {
-  width : 350px;
-  height: 60px;
-  border: 1px solid #000;
-  border-radius: 10px;
+  width : 700px;
+  height: 100px;
+  margin: 0 auto;  
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: white;
+  border-radius: 10px;
 }
+
 
 /* 공 하나 */
 .eachnum{
-  font-size: 0.75em;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  font-size: 2em;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
   color: white;
   background-color: red;
   display: flex;
@@ -64,14 +103,15 @@ body {
 }
 
 button {
-  font-size: 0.5em;
-  width: 100px;
-  height: 30px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  width: 150px;
+  height: 50px;
   border: none;
   border-radius: 6px;
   color: white;
   background-color: salmon;
-    cursor: pointer;
+  cursor: pointer;
 
 }
 
@@ -81,3 +121,11 @@ button :active {
   height: 42px;
 }
 
+.linkA {
+  position: relative;
+}
+.linkB {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

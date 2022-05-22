@@ -1,18 +1,5 @@
 
-/* 
-1. id가 "todo-list"인 할 일이 li로 추가되는 목록
-2. li로 된 할 일을 선택하면 회색으로 바뀜 
-3. li로 된 할 일의 x를 누르면 li가 삭제 됨
-4. id가 "todo-form"인 form에서 할 일을 입력, 제출
-5. 할 일은 local storage에 저장 됨.
-6. todoList는 ul을 선택
-7. todoForm은 할 일 입력 form을 선택
-8. todoArr는 할 일을 보관하는 배열
-9. displayTodos 함수
-10. handleTodoDelBtnClick 함수는 주어진 id를 가진 할 일만 todoArr에서 제외
 
-
-*/
 
 const todoList = document.getElementById("todo-list")
 const todoForm = document.getElementById("todo-form")
@@ -45,6 +32,7 @@ todoForm.addEventListener("submit", function(e) {
   }
   todoForm.todo.value = "" // 입력한 값을 초기화
   todoArr.push(toBeAdded) // 새로 추가된 할 일을 todoArr에 추가
+  audio.play();
   displayTodos() // 할 일 목록을 보여줌
   saveTodos()
 })  

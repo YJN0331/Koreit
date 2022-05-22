@@ -1,23 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript To Do List</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'LAB디지털';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Dokrip';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Dokrip.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'KoPubDotumMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="app">
-      <h1>TO DO LIST</h1>
-      <ul id="todo-list">
+  <header>
+    <nav class="navbar-nav">
+      <ul class="nav-ul">
+        <li class="nav-li"><a href="../index.html" style="font-size: 40px;">Home</a></li>
+        <li class="nav-li"><a href="../01_clock/clock.html" style="font-family: LAB디지털; font-size: 20px; color:#8a8a8a;">Digital Clock</a></li>
+        <li class="nav-li"><a href="../02_lotto/Lotto.html" style="font-size: 40px;">
+            <span style="color: #e0cf14;">L</span>
+            <span style="color: blue;">O</span>
+            <span style="color: #a8a8a3;">T</span>
+            <span style="color: #ff6e30;">T</span>
+            <span style="color: lightgreen;">O</span>
+          </a></li>
+        <li class="nav-li"><a href="todo.html" style="font-family: Dokrip; font-size: 25px;">
+            <img width="20px" src="reminder.png" style="top: 10px;">ReMinder</a></li>
+        <li class="nav-li"><a href="../04_photo/photo.html" style="font-family: KoPubDotumMedium; font-size: 25px;">
+            <img width="20px" src="photoicon.svg">Photo</a></li>
       </ul>
-      <form id="todo-form">
-        <input name="todo" type="text" placeholder="TO DO..." maxlength="16" autocomplete="off"><input type="submit" value="추가">
-      </form>
-    </div>
-  </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="app">
+          <h1><img width="20px" src="reminder.png">ReMinder</h1>
+          <ul id="todo-list">
+          </ul>
+          <form id="todo-form">
+            <input name="todo" type="text" placeholder="remind to..." maxlength="16" autocomplete="off"><input
+              type="submit" value="추가">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
   <script src="truescript.js"></script>
 </body>
+
 </html>

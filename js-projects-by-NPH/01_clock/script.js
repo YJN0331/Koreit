@@ -1,6 +1,12 @@
 // 요소 선택
-const todayDiv = document.getElementById('today');
-const timeDiv = document.getElementById('time');
+const yearDiv = document.getElementById('year');
+const monthDiv = document.getElementById('month');
+const dayDiv = document.getElementById('day');
+const hourDiv = document.getElementById('hour');
+const frontminuteDiv = document.getElementById('frontminute');
+const minuteDiv = document.getElementById('minute');
+const afterminuteDiv = document.getElementById('afterminute');
+const secondDiv = document.getElementById('second');
 
 // getTime 함수
 function getTime(){
@@ -9,17 +15,28 @@ function getTime(){
   let month = now.getMonth() + 1;
   let date = now.getDate();
   let hour = now.getHours();
+  let frontminute = (now.getMinutes()-1);
   let minute = now.getMinutes();
+  let afterminute =  (now.getMinutes()+1);
   let second = now.getSeconds();
 
   month = month < 10 ? `0${month}` : month;
   date = date < 10 ? `0${date}` : date;
   hour = hour < 10 ? `0${hour}` : hour;
+  frontminute = frontminute < 10 ? `0${frontminute}` : frontminute;
   minute = minute < 10 ? `0${minute}` : minute;
+  afterminute = afterminute < 10 ? `0${afterminute}` : afterminute;
   second = second < 10 ? `0${second}` : second;
 
-  todayDiv.textContent = `${year}년 ${month}월 ${date}일`
-  timeDiv.textContent = `${hour}:${minute}:${second}`
+  yearDiv.textContent = `${year}`
+  monthDiv.textContent = `${month}`
+  dayDiv.textContent = `${date}`
+  hourDiv.textContent = `${hour}`
+  frontminuteDiv.textContent = `${frontminute}`
+  minuteDiv.textContent = `${minute}`
+  afterminuteDiv.textContent = `${afterminute}`
+  secondDiv.textContent = `${second}초`
+  
 }
 
 // setInterval 메소드

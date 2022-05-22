@@ -5,114 +5,153 @@
   font-style: normal;
 }
 
-*{
+@font-face {
+  font-family: 'UhBeeann';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeann.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+}
+
+.nav-ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-top: 10px;
+}
+
+
+nav>ul>li {
+  font-size: 30px;
+  list-style: none;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+* {
   font-family: 'Dongle-Regular';
   box-sizing: border-box;
 }
 
-html{
-  font-size: 18px;
+
+body {
+  margin: 0;
 }
 
-body{
-  margin: 0; 
-}
-
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.app{
+.app {
   position: relative;
   width: 320px;
   height: 568px;
   border-radius: 16px;
-  background-color: rgb(171, 193, 209);
+  background-image: url(03_todo/istockphoto-184921412-612x612.jpg);
 }
 
-.app  > h1{
+.app>h1 {
   font-size: 2em;
   text-align: center;
-  margin: 10px 5px;
+  margin: 8px 5px 0 5px;
   border-bottom: 0.5px solid rgb(234, 234, 234);
 }
 
-ul{
+div>ul {
   max-height: 420px;
   overflow: auto;
+  margin-top: 0;
+  text-align: right;
 }
 
-ul > li{
+div>ul>li {
   cursor: pointer;
   position: relative;
   left: 60px;
   list-style-type: none;
   width: 200px;
-  height: 40px;
+  height: 38px;
   margin-bottom: 10px;
   padding: 6px;
-  background-color: rgb(254, 229, 77);
   border-radius: 8px;
+  font-family: 'UhBeeann';
+  font-size: 25px;
 }
 
-ul > li::after{
+div>ul>li::after {
   content: "";
   position: absolute;
   top: 10px;
   right: -10px;
   width: 0;
-  height: 0; 
+  height: 0;
   border-bottom: 16px solid transparent;
-  border-left: 16px solid rgb(254, 229, 77);
+
+  font-family: 'UhBeeann';
+
 }
 
-ul > li > span{
+div>ul>li>span {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16px; 
+  width: 16px;
   height: 16px;
   border-radius: 8px;
-  background-color: rgb(234, 234, 234);
+
   position: absolute;
   left: -20px;
   bottom: 2px;
 }
 
-form{
+form {
   background-color: rgb(255, 255, 255);
   position: absolute;
   bottom: 0;
 }
-input{
+
+input {
   font-size: 1.4em;
   margin: 0;
   border: none;
   height: 45px;
 }
-input[type="text"]{
+
+input[type="text"] {
   width: 240px;
   padding-left: 10px;
 }
-input[type="text"]:focus{
+
+input[type="text"]:focus {
   outline: none;
 }
-input[type="submit"]{
+
+input[type="submit"] {
   cursor: pointer;
   width: 80px;
   border-radius: 8px;
   background-color: rgb(254, 229, 77);
 }
 
-.done{
-  color: rgb(93, 93, 93);
-  background-color: rgb(234, 234, 234);
+.done {
+
+  text-decoration: line-through;
+  text-decoration-color: red;
 }
 
-.done::after{
-  border-left: 16px solid rgb(234, 234, 234);
+.done::after {
+  content: none
 }
-
