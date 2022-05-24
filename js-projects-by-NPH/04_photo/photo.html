@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Photo Slide - DOG ALBUM</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'LAB디지털';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Dokrip';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Dokrip.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'KoPubDotumMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="clock.html">Digital Clock</a></li>
-      <li><a href="lotto.html">Lotto</a></li>
-      <li><a href="todo.html">Todo</a></li>
-      <li><a href="photo.html">Photo</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <div class="app">
-      <div id="photo" class="photo"></div>
-      <button id="prev" class="prev">PREV</button>
-      <button id="next" class="next">NEXT</button>
+  <header>
+    <nav class="navbar-nav">
+      <ul class="nav-ul">
+        <li class="nav-li"><a href="../index.html" style="font-size: 40px;">Home</a></li>
+        <li class="nav-li"><a href="../01_clock/clock.html" style="font-family: LAB디지털; font-size: 20px; color:#8a8a8a;">Digital Clock</a></li>
+        <li class="nav-li"><a href="../02_lotto/Lotto.html" style="font-size: 40px;">
+            <span style="color: #e0cf14;">L</span>
+            <span style="color: blue;">O</span>
+            <span style="color: #a8a8a3;">T</span>
+            <span style="color: #ff6e30;">T</span>
+            <span style="color: lightgreen;">O</span>
+          </a></li>
+        <li class="nav-li"><a href="../03_todo/todo.html" style="font-family: Dokrip; font-size: 25px;">
+            <img width="20px" src="reminder.png" style="top: 10px;">ReMinder</a></li>
+        <li class="nav-li"><a href="photo.html" style="font-family: KoPubDotumMedium; font-size: 25px;">
+            <img width="20px" src="photoicon.svg">Photo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <Main>
+    <div class="container">
+      <div id="prev" class="prev"><img width="200px" height="200px" src="leftBtnImg.png"></div>
+      <div class="app">
+        <div id="photo" class="photo"></div>
+      </div>
+      <div id="next" class="next"><img width="200px" height="200px" src="rightBtnImg.png"></div>
     </div>
-  </div>
 
-  <div id="beginning" class="no-photo beginning">
-    <button id="call-btn" class="call-btn">CALL</button>
-  </div>
+    <div id="beginning" class="no-photo beginning">
+      <button id="call-btn" class="call-btn">🐶</button>
+    </div>
+  </Main>
 
-  <script src="script.js"></script>
+  <script src="script copy.js"></script>
 </body>
+
 </html>

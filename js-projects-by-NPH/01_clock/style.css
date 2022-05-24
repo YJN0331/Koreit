@@ -1,41 +1,136 @@
 @charset "utf-8";
 
 @font-face {
+  font-family: 'Dongle-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UhBeeann';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeann.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+}
+
+.nav-ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-top: 10px;
+}
+
+
+nav>ul>li {
+  font-size: 30px;
+  list-style: none;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+@font-face {
   font-family: 'LAB디지털';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-*{ 
-  font-family: 'LAB디지털';
+* {
   box-sizing: border-box;
-  font-size: 32px;
 }
 
-body{
+body {
   margin: 0;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
   height: 100vh;
+}
+
+section {
+  font-family: 'LAB디지털';
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.clock{
-  min-width: 360px;
+.outline {
+  background-color: rgb(0, 0, 0);
   margin: 0 auto;
-  padding: 50px 0;
-  text-align: center;
+  min-width: 400px;
+  min-height: 400px;
+  border-radius: 200px;
   border: 1px solid rgb(255, 255, 255);
-  border-radius: 10px;
+
 }
 
-.today{
-  margin-bottom: 10px;
+.clock {
+  width: 300px;
+  height: 350px;
+  margin: 0 auto;
+  padding: 85px 0;
+  text-align: center;
 }
 
-.time{
+
+.time {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+}
+
+.hour {
+  padding-top: 10px;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  color: #47C83E;
+  font-size: 135px;
+  width: 200px;
+
+}
+
+.frontminute {
+  padding: 15px 0 0 0;
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 15px;
+  color: #004A00
+}
+
+.minute {
+  padding: 5px 0 0 0;
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 40px;
+  color: #47C83E;
+
+}
+
+.afterminute {
+  padding: 15px 0 0 0;
+  grid-column: 2;
+  grid-row: 3;
+  font-size: 15px;
+  color: #004A00
+}
+
+
+.date {
   margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 22px;
+  color: white;
 }

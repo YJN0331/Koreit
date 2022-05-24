@@ -3,6 +3,7 @@ const todoList = document.getElementById('todo-list')
 const todoForm = document.getElementById('todo-form')
 let todoArr = [];
 
+
 // displayTodos 함수
 function displayTodos(){
   todoList.innerHTML = ""
@@ -10,16 +11,18 @@ function displayTodos(){
     const todoItem = document.createElement('li')
     const todoDelBtn = document.createElement('span')
     todoDelBtn.innerText = 'x'
-    todoDelBtn.title = '클릭시 삭제'
+    todoDelBtn.title = '삭제'
     todoItem.innerText = aTodo.todoText
-    todoItem.title = '클릭시 완료'
+    todoItem.title = '완료'
     todoItem.classList.add(aTodo.todoDone ? 'done' : 'yet')
     todoItem.appendChild(todoDelBtn)
     todoDelBtn.addEventListener('click', function(){
       handleTodoDelBtnClick(aTodo.todoId)
+      
     })
     todoItem.addEventListener('click', function(){
       handleTodoItemClick(aTodo.todoId)
+      underlineaudio()
     })
     todoList.appendChild(todoItem)
   });
@@ -30,6 +33,7 @@ function handleTodoDelBtnClick(clickedId){
   todoArr = todoArr.filter(function(aTodo){
     return aTodo.todoId !== clickedId
   })
+  deleteaudio()
   displayTodos()
   saveTodos()
 }
@@ -40,6 +44,7 @@ function handleTodoItemClick(clickedId){
     return aTodo.todoId !== clickedId ? 
     aTodo : { ...aTodo, todoDone: !aTodo.todoDone } 
   })
+  
   displayTodos()
   saveTodos()
 }
@@ -69,7 +74,23 @@ todoForm.addEventListener('submit', function(e){
   todoArr.push(toBeAdded)
   displayTodos()
   saveTodos()
+  writeaudio();
 })  // 이벤트 핸들링 끝
 
 
 loadTodos() // 시작할 때 한번만!
+
+function writeaudio() {
+  var audio = new Audio('sound_write.wav');
+  audio.play();
+}
+
+function underlineaudio() {
+  var audio = new Audio('sound_underline.wav');
+  audio.play();
+}
+
+function deleteaudio() {
+  var audio = new Audio('sound_delete.mp3');
+  audio.play();
+}

@@ -5,82 +5,133 @@
   font-style: normal;
 }
 
-*{
+@font-face {
   font-family: 'Dongle-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UhBeeann';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeann.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  
+}
+.nav-ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-top: 10px;
+}
+
+
+nav>ul>li {
+  font-size: 30px;
+  list-style: none;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black  ;
+
+}
+
+* {
   box-sizing: border-box;
 }
 
-html{
-  font-size: 18px;
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url(dogcharacter.png);
+  
 }
 
-body{
-  margin: 0; 
-}
+main {}
 
-.container{
+.container {
   display: flex;
-  justify-content: center;
+  justify-content: center;  
+  flex-direction: row;  
+  width: 100%;
+  height: 100vh;
+  
 }
 
-.app{
+.app {
   position: relative;
   width: 600px;
   min-width: 600px;
-  height: 400px;
-  background-color: rgb(81, 94, 123);
-  border-radius: 0 0 8px 8px;
+  height: 400px;  
+  padding-top: 10vh;
+ 
 }
 
-button{
+.call-btn {
   font-size: 24px;
   width: 300px;
   height: 40px;
   border: none;
-  color: white;
-  border: 1px solid black;
-  background-color: rgb(24, 49, 83); 
   cursor: pointer;
 }
 
-button:active{
-  background-color:rgb(2, 28, 64);
+.call-btn:active {
+  background-color: rgb(2, 28, 64);
 }
 
-.app > .photo{
-  height: 360px;
+.photo {  
+  height: 600px;
   background-size: 100% 100%;
 }
 
-.app > .prev{
+.prev {
+  width: 200px;
+  height: 200px;
   float: left;
-  border-radius: 0 0 0 8px;
+  border: 0;
+  outline: 0;  
+  margin-top: 30vh;
+  cursor: pointer;
 }
 
-.app > .next{
+.next {
+  width: 200px;
+  height: 200px;
   float: right;
-  border-radius: 0 0 8px 0;
+  border: 0;
+  outline: 0;
+  margin-top: 30vh;
+  cursor: pointer;
 }
 
-.no-photo{
+.no-photo {
   display: none;
 }
 
-.beginning{
+.beginning {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-image: url(dogcharacter.png);
   background-color: rgb(81, 94, 123);
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 99;
+  align-items: center; 
 }
 
-.call-btn{
-  font-size: 32px;
-  height: 50px;
+.call-btn {
+  font-size: 120px;
+  height: 200px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 0 #000000;
 }

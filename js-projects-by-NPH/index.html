@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>JavaScript HOME</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    * {
-      font-size: 1.2em;
-      font-weight: bold;
+    @font-face {
+      font-family: 'LAB디지털';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Dokrip';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Dokrip.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'KoPubDotumMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
     }
   </style>
 </head>
-<body>
-  <!-- clock 링크 -->
-  <a href="/js-projects-by-NPH/01_clock/clock.html">1. 디지털 시계 만들기</a><br><br>
-    <!-- lotto 링크 -->
-  <a href="/js-projects-by-NPH/02_lotto/lotto.html">2. 로또 추첨하기</a><br><br>
-  <!-- todo 링크 -->
-  <a href="/js-projects-by-NPH/03_todo/todo.html">3. 할 일 목록 만들기</a><br><br>
-  <!-- photo 링크 -->
-  <a href="/js-projects-by-NPH/04_photo/photo.html">4. 포토 앨범 만들기</a>
 
-  
+<body>
+  <header>
+    <nav class="navbar-nav">
+      <ul class="nav-ul">
+        <li class="nav-li"><a href="index.html" style="font-size: 40px;">Home</a></li>
+        <li class="nav-li"><a href="01_clock\clock.html" style="font-family: LAB디지털; font-size: 20px; color:#8a8a8a;">Digital Clock</a></li>
+        <li class="nav-li"><a href="02_lotto\Lotto.html" style="font-size: 40px;">
+            <span style="color: #e0cf14;">L</span>
+            <span style="color: blue;">O</span>
+            <span style="color: #a8a8a3;">T</span>
+            <span style="color: #ff6e30;">T</span>
+            <span style="color: lightgreen;">O</span>
+          </a></li>
+        <li class="nav-li"><a href="03_todo\todo.html" style="font-family: Dokrip; font-size: 25px;">
+            <img width="20px" src="reminder.png" style="top: 10px;">ReMinder</a></li>
+        <li class="nav-li"><a href="04_photo\photo.html" style="font-family: KoPubDotumMedium; font-size: 25px;">
+            <img width="20px" src="photoicon.svg">Photo</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="out">
+      <div class="container">
+        <p>KOREA IT FRONT-END</p>
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>

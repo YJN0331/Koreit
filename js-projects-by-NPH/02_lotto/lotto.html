@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Lotto</title>
+  <title>JavaScript Lottery Draw </title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'LAB디지털';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Dokrip';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Dokrip.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'KoPubDotumMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <header>
+    <nav class="navbar-nav">
+      <ul class="nav-ul">
+        <li class="nav-li"><a href="../index.html" style="font-size: 40px;">Home</a></li>
+        <li class="nav-li"><a href="../01_clock/clock.html" style="font-family: LAB디지털; font-size: 20px; color:#8a8a8a;">Digital Clock</a></li>
+        <li class="nav-li"><a href="Lotto.html" style="font-size: 40px;">
+            <span style="color: #e0cf14;">L</span>
+            <span style="color: blue;">O</span>
+            <span style="color: #a8a8a3;">T</span>
+            <span style="color: #ff6e30;">T</span>
+            <span style="color: lightgreen;">O</span>
+          </a></li>
+          <li class="nav-li"><a href="../03_todo/todo.html" style="font-family: Dokrip; font-size: 25px;">
+            <img width="20px" src="reminder.png" style="top: 10px;">ReMinder</a></li>
+        <li class="nav-li"><a href="../04_photo/photo.html" style="font-family: KoPubDotumMedium; font-size: 25px;">
+            <img width="20px" src="photoicon.svg">Photo</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="container">
     <div class="lotto">
-      <h3>로또 번호 추첨</h3>
+      <h1>로또 자동 번호 발급</h1>
       <div class="numbers"></div>
       <!-- js로 class eachnum인 공을 생성 -->
       <button id="draw">추첨</button>
-      <button id="reset">다시</button>
+      <button id="reset">재추첨</button>
     </div>
   </div>
 
+  <div class="linkA">
+    <a class="linkB" href="https://www.dhlottery.co.kr/common.do?method=main">동행복권 바로가기</a>
+  </div>
+  <script src="script.js"></script>
 
-
-
-   
 </body>
-<script src="script.js"></script>
+
 </html>
