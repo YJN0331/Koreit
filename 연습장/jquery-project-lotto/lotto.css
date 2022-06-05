@@ -1,0 +1,83 @@
+/* 글꼴 웹폰트로 갖다놓기 */
+@font-face {
+  font-family: 'LAB디지털';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{font-family: 'LAB디지털';}
+
+html, body{ margin: 0; background-color: #eeeeee; }
+#container{
+  width: 360px; margin: 0 auto; text-align: center;
+}
+header > h1{
+  font-size: 48px; margin: 16px 0; color: orange;
+}
+footer > h3{
+  border-top: 1px solid gray; padding-top: 10px;
+}
+/* 번호판 */
+.js-numbers{
+  width: 350px; margin: 0 auto;
+  display: flex; 
+
+  /* 자식 요소가 많아져 overflow 됐을 때, 내용을 줄바꿈으로 조치해준다 */
+  flex-wrap: wrap;
+}
+.js-numbers > div{
+  width: 50px; height: 36px; margin: 5px; 
+  padding: 5px; text-align: center;
+}
+.js-numbers > div > p{
+  margin: 0; line-height: 40px;
+  border: 1px solid gray; border-radius: 8px;
+  color: black; background-color: white;
+}
+
+/* 번호판 밑에 있는 요소들 */
+.js-btn{
+  margin-top: 18px; width: 120px; height: 50px;
+  font-size: 18px; color: white; background-color: orange;
+  border: none; border-radius: 8px;
+}
+
+/* '생성중.' 이라는 텍스트의 표시 여부 */
+.ing{ visibility: hidden; }
+.visible{ visibility: visible; }
+
+/* 리셋할 필요가 있을 때만 보여주면 되는 버튼 */
+.js-reset{
+  border: none; border-radius: 6px;
+  color: white; background-color: orangered;
+  width: 60px; height: 20px;
+  display: none; 
+}
+/* 버튼을 눌러도 외곽선 안 나타나게 하기! */
+.js-btn:active, .js-btn:focus{
+  outline: none;
+}
+
+.selected > p{
+  color: white !important;
+  background-color: orange !important; 
+}
+
+.cNumbers{
+  display: flex;
+  justify-content: center;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  margin: 0 0 5px 0;
+  background-color: #ffffff;
+}
+
+.cNumber{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 32px; height: 32px; font-size: 24px;
+  border-radius: 50%; 
+  color: white;
+}

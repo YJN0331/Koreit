@@ -1,0 +1,218 @@
+/* 글꼴 웹폰트로 갖다놓기 */
+
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+
+.spoka * {
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+
+.spoka * {
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+
+.spoka * {
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+#container {
+  width: 400px;
+  height: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+section {}
+
+header>h1 {
+  font-size: 48px;
+  margin: 16px 0;
+  color: orange;
+}
+
+footer>h3 {
+  border-top: 1px solid gray;
+  padding-top: 10px;
+}
+
+/* 번호판 */
+.js-numbers {
+  width: 350px;
+  margin: 0 auto;
+  display: flex;
+
+  /* 자식 요소가 많아져 overflow 됐을 때, 내용을 줄바꿈으로 조치해준다 */
+  flex-wrap: wrap;
+}
+
+.js-numbers>div {
+  width: 22px;
+  height: 23px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.js-numbers>div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-image: url(images/bg-check-number.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  top: 0
+}
+
+.js-numbers>div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-image: url(images/bg-check-number.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 100%;
+  bottom: 0;
+
+}
+
+.js-numbers>div>p {
+  margin: -8px;
+  line-height: 40px;
+  color: #f56d6d;
+  cursor: pointer;
+  text-align: center;
+
+
+}
+
+
+/* 번호판 밑에 있는 요소들 */
+.js-btn {
+  margin-top: 18px;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  color: white;
+  background-color: orange;
+  border: none;
+  border-radius: 8px;
+}
+
+/* '생성중.' 이라는 텍스트의 표시 여부 */
+.ing {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/* 리셋할 필요가 있을 때만 보여주면 되는 버튼 */
+.js-reset {
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: orangered;
+  width: 60px;
+  height: 20px;
+  display: none;
+}
+
+/* 버튼을 눌러도 외곽선 안 나타나게 하기! */
+.js-btn:active,
+.js-btn:focus {
+  outline: none;
+}
+
+
+
+.selected>p {
+  color: white !important;
+  background-color: #555 !important;
+
+}
+
+.js-numbers>div.selected::before {
+  background-image: url(images/bg-check-number-1.png);
+  background-color: #555 !important;
+
+}
+
+.js-numbers>div.selected::after {
+  background-image: url(images/bg-check-number-1.png);
+  background-color: #555 !important;
+
+}
+
+.result {
+  width: 360px;
+  margin: auto;
+}
+
+.cNumbers {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  margin: 0 0 5px 0;
+  background-color: #ffffff;
+  
+  overflow: hidden;
+}
+
+.result .cNumbers .cNumber::before {
+  content : "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: url(images/bg-highlight-ball.png) no-repeat;
+}
+
+.cNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  color: white;
+  position: relative;
+  
+}
+
+a {
+  text-decoration: none;
+  color : black;
+}
